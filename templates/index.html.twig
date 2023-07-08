@@ -1,0 +1,15 @@
+{% if message %}
+    <script>
+        alert('{{ message }}');
+    </script>
+{% endif %}
+
+<h1>Bienvenu sur notre TD MVC !</h1>
+<p>Réalisé par Cedric DOUSSET et Jeremy AUBRY</p>
+<h2><a href="/register">click pour créer un nouveau compte !</a></h2>
+<h2>Liste des utilisateurs enregistré:</h2>
+<ul>
+{% for user in users %}
+    <li>{{ user.username }}</li>
+{% endfor %}
+</ul>
