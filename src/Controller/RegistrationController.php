@@ -41,10 +41,10 @@ class RegistrationController extends AbstractController
         $this->user->create($username, $email, $hashedPassword);
 
 
-        // Set a session variable.
+
         $_SESSION['message'] = 'Votre compte a bien été créé.';
 
-        // Redirect the user to the index page.
+
         header('Location: /');
         exit();
     }

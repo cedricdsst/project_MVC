@@ -18,12 +18,12 @@ class IndexController extends AbstractController
   public function home(): string
   {
     $message = $_SESSION['message'] ?? null;
-    unset($_SESSION['message']); // Clear the message.
+    unset($_SESSION['message']);
 
-    // Fetch all users from the database.
+
     $users = $this->user->getAllUsers();
 
-    // Pass the users to the view.
+
     return $this->twig->render('index.html.twig', ['message' => $message, 'users' => $users]);
   }
 }

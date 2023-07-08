@@ -44,10 +44,10 @@ $twig = new Environment($loader, [
   'cache' => __DIR__ . '/../var/twig/',
 ]);
 
-// Create an instance of User
+
 $user = new User($pdo);
 
-// Initialize the Router
+
 $router = new Router([
   Environment::class => $twig,
   PDO::class => $pdo,
